@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: scout-platform
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: APP_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: UPLOAD_DIR
+        value: /var/data/uploads
+      - key: MAIL_MODE
+        value: provider
+      - key: AUTH_RATE_LIMIT
+        value: "12"
+      - key: GENERAL_RATE_LIMIT
+        value: "120"
+    disk:
+      name: scout-uploads
+      mountPath: /var/data
+      sizeGB: 1

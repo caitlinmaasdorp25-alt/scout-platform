@@ -1,0 +1,16 @@
+{
+  "name": "scout-platform",
+  "version": "0.9.0",
+  "private": true,
+  "description": "SCOUT professional discovery platform \u2014 beta infrastructure",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}

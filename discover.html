@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover Talent — SCOUT</title>
+<meta name="description" content="Discover independent professionals across Namibia and South Africa on SCOUT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><a class="logo" href="index.html"><span class="logo-mark">✦</span>SCOUT</a><nav><a class="active" href="discover.html">Discover</a><a href="projects.html">Projects</a><a href="discover.html?category=Design">Categories</a><a href="index.html#how">How it works</a></nav><div class="header-actions"><a class="text-btn" href="login.html">Log in</a><a class="pill-btn dark" href="join.html">Join SCOUT <span>↗</span></a></div><button class="menu" aria-label="Open menu">☰</button></header>
+<main id="discover-page" class="discover-page">
+<section class="discover-intro"><div class="eyebrow"><span class="dot"></span> SCOUT / DISCOVER</div><div class="discover-top"><div><h1>Find your<br><em>people.</em></h1></div><p>Search independent professionals, explore their work, and find someone who fits the brief — from Windhoek to Johannesburg and everywhere in between.</p></div></section>
+<section class="discover-tools">
+<form id="discover-search"><span>⌕</span><input id="q" name="q" placeholder="Search by name, skill, service or profession…" aria-label="Search talent"><button type="submit">Search <span>↗</span></button></form>
+<div class="chips" id="chips" aria-label="Popular categories"><button class="selected" data-filter="All">All talent</button><button data-filter="Design">Design</button><button data-filter="Technology">Technology</button><button data-filter="Marketing">Marketing</button><button data-filter="Photography">Photography</button><button data-filter="Business">Business</button><button data-filter="Beauty">Beauty</button><button data-filter="Writing">Writing</button></div>
+</section>
+<section class="discover-results">
+<div class="results-toolbar"><div><strong id="result-count">8 people</strong><span> worth discovering</span></div><div class="filter-row"><label>Country <select id="location-filter"><option>All</option><option>Namibia</option><option>South Africa</option></select></label><label>Availability <select id="availability-filter"><option>All</option><option>Available</option><option>Busy</option></select></label><label>Sort <select id="sort-filter"><option value="relevance">Relevance</option><option value="availability">Available first</option><option value="name">Name A–Z</option><option value="category">Category</option></select></label><button id="clear-filters" class="clear-filter">Clear</button></div></div>
+<div id="discover-grid" class="profile-grid discover-grid"></div>
+<div id="discover-empty" class="discover-empty" hidden><div class="empty-mark">◎</div><h2>No one here yet.</h2><p>Try another search or clear a filter. SCOUT is growing.</p><button id="clear-filters-empty" class="contact-btn" type="button">Reset discovery ↗</button></div>
+</section>
+<section class="discover-note"><div><span>✦</span> WORTH A LOOK</div><h2>Don't just find a service.<br><em>Find the person.</em></h2><p>Profiles on SCOUT put the human, the work and the way they work in the same place.</p></section>
+</main>
+<footer><div class="logo"><span class="logo-mark">✦</span>SCOUT</div><p>Talent is everywhere. Start looking.</p><span>© 2026 SCOUT</span></footer>
+<script src="script.js"></script><script>document.getElementById('clear-filters-empty')?.addEventListener('click',()=>document.getElementById('clear-filters')?.click());</script>
+<script src="api.js"></script></body></html>
